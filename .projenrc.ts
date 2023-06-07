@@ -28,4 +28,5 @@ const project = new CustomTypescriptProject({
   ],
 })
 project.compileTask.reset(`cp -R src  ${project.libdir}`)
+
 project.synth()
