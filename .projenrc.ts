@@ -4,6 +4,9 @@ const project = new CustomTypescriptProject({
   devDeps: ['@chetzof/projen-base'],
   name: '@vladcos/eslint-config',
   projenrcTs: true,
+  peerDependencyOptions: {
+    pinnedDevDependency: false,
+  },
   peerDeps: [
     'eslint',
     '@typescript-eslint/eslint-plugin',
