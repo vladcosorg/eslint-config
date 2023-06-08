@@ -37,6 +37,5 @@ project.eslint._extends = project.eslint._extends.filter(
   (item: string) => item !== project.name,
 )
 project.eslint.addExtends('./src/index.js')
-project.package.addField('main', '')
 project.compileTask.reset(`cp -R src  ${project.libdir}`)
 project.synth()
