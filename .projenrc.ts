@@ -1,4 +1,5 @@
 import { CustomTypescriptProject } from '@chetzof/projen-base'
+
 const project = new CustomTypescriptProject({
   defaultReleaseBranch: 'main',
   devDeps: ['@chetzof/projen-base'],
@@ -30,6 +31,12 @@ const project = new CustomTypescriptProject({
     'prettier',
   ],
 })
+// @ts-expect-error We have to edit the private var
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-member-access
+project.eslint._extends = project.eslint._extends.filter(
+  (item: string) => item !== project.name,
+)
+project.eslint.addExtends('./src/index.js')
+project.package.addField('main', '')
 project.compileTask.reset(`cp -R src  ${project.libdir}`)
-
 project.synth()

@@ -6,6 +6,7 @@
   },
   "root": true,
   "plugins": [
+    "@typescript-eslint",
     "import"
   ],
   "parser": "@typescript-eslint/parser",
@@ -15,7 +16,8 @@
     "project": "./tsconfig.dev.json"
   },
   "extends": [
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "./src/index.js"
   ],
   "settings": {
     "import/parsers": {
