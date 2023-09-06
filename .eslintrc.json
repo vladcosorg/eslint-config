@@ -13,11 +13,12 @@
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
-    "project": "./tsconfig.dev.json"
+    "project": "./tsconfig.json"
   },
   "extends": [
     "plugin:import/typescript",
-    "./src/index.js"
+    "./src/index.js",
+    "@vladcos/eslint-config"
   ],
   "settings": {
     "import/parsers": {
@@ -29,7 +30,7 @@
     "import/resolver": {
       "node": {},
       "typescript": {
-        "project": "./tsconfig.dev.json",
+        "project": "./tsconfig.json",
         "alwaysTryTypes": true
       }
     }

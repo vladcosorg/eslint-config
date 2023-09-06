@@ -1,8 +1,8 @@
-import { CustomTypescriptProject } from '@chetzof/projen-base'
+import { TypeScriptProject } from '@vladcos/projen-base'
 
-const project = new CustomTypescriptProject({
+const project = new TypeScriptProject({
   defaultReleaseBranch: 'main',
-  devDeps: ['@chetzof/projen-base'],
+  devDeps: ['@vladcos/projen-base'],
   name: '@vladcos/eslint-config',
   projenrcTs: true,
   peerDependencyOptions: {
@@ -10,9 +10,9 @@ const project = new CustomTypescriptProject({
   },
   peerDeps: [
     'eslint',
-    '@typescript-eslint/eslint-plugin',
-    '@typescript-eslint/parser',
-    'eslint-config-canonical',
+    '@typescript-eslint/eslint-plugin@6',
+    '@typescript-eslint/parser@6',
+    // 'eslint-config-canonical',
     'eslint-config-prettier',
     'eslint-define-config',
     'eslint-import-resolver-alias',
