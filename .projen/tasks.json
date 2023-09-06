@@ -78,7 +78,7 @@
       "description": "Only compile",
       "steps": [
         {
-          "exec": "packemon build --loadConfigs"
+          "exec": "cp -R src  lib"
         }
       ]
     },

@@ -5,6 +5,7 @@ const project = new TypeScriptProject({
   devDeps: ['@vladcos/projen-base'],
   name: '@vladcos/eslint-config',
   projenrcTs: true,
+  packemon: false,
   peerDependencyOptions: {
     pinnedDevDependency: false,
   },
