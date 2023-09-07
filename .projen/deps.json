@@ -104,74 +104,92 @@
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
+      "version": "^6",
       "type": "runtime"
     },
     {
       "name": "@typescript-eslint/parser",
-      "type": "runtime"
-    },
-    {
-      "name": "eslint",
+      "version": "^6",
       "type": "runtime"
     },
     {
       "name": "eslint-config-prettier",
+      "version": "^9",
       "type": "runtime"
     },
     {
       "name": "eslint-define-config",
+      "version": "^1",
       "type": "runtime"
     },
     {
       "name": "eslint-import-resolver-alias",
+      "version": "^1",
       "type": "runtime"
     },
     {
       "name": "eslint-import-resolver-typescript",
+      "version": "^3",
       "type": "runtime"
     },
     {
       "name": "eslint-plugin-import",
+      "version": "^2",
       "type": "runtime"
     },
     {
       "name": "eslint-plugin-jest",
+      "version": "^27",
       "type": "runtime"
     },
     {
       "name": "eslint-plugin-json-files",
+      "version": "^3",
       "type": "runtime"
     },
     {
       "name": "eslint-plugin-json-schema-validator",
+      "version": "^4",
       "type": "runtime"
     },
     {
       "name": "eslint-plugin-jsonc",
+      "version": "^2",
       "type": "runtime"
     },
     {
       "name": "eslint-plugin-node",
+      "version": "^11",
       "type": "runtime"
     },
     {
       "name": "eslint-plugin-promise",
+      "version": "^6",
       "type": "runtime"
     },
     {
       "name": "eslint-plugin-sonarjs",
+      "version": "latest",
       "type": "runtime"
     },
     {
       "name": "eslint-plugin-unicorn",
+      "version": "^48",
       "type": "runtime"
     },
     {
       "name": "eslint-plugin-unused-imports",
+      "version": "^3",
       "type": "runtime"
     },
     {
       "name": "eslint-plugin-vue",
+      "version": "^9",
+      "type": "runtime"
+    },
+    {
+      "name": "eslint",
+      "version": "^8",
       "type": "runtime"
     }
   ],
