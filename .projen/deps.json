@@ -48,6 +48,14 @@
       "type": "build"
     },
     {
+      "name": "eslint-define-config",
+      "type": "build"
+    },
+    {
+      "name": "eslint-import-resolver-alias",
+      "type": "build"
+    },
+    {
       "name": "eslint-import-resolver-node",
       "type": "build"
     },
@@ -57,6 +65,38 @@
     },
     {
       "name": "eslint-plugin-import",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-json-files",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-json-schema-validator",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-jsonc",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-node",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-promise",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-sonarjs",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-unicorn",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-vue",
       "type": "build"
     },
     {
@@ -105,12 +145,10 @@
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
-      "version": "6",
       "type": "peer"
     },
     {
       "name": "@typescript-eslint/parser",
-      "version": "6",
       "type": "peer"
     },
     {
@@ -135,10 +173,6 @@
     },
     {
       "name": "eslint-plugin-import",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-plugin-jest",
       "type": "peer"
     },
     {
@@ -170,20 +204,11 @@
       "type": "peer"
     },
     {
-      "name": "eslint-plugin-unused-imports",
-      "type": "peer"
-    },
-    {
       "name": "eslint-plugin-vue",
       "type": "peer"
     },
     {
       "name": "prettier",
-      "type": "peer"
-    },
-    {
-      "name": "projen",
-      "version": "0.72.19",
       "type": "peer"
     }
   ],

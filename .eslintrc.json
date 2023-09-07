@@ -17,8 +17,7 @@
   },
   "extends": [
     "plugin:import/typescript",
-    "./src/index.js",
-    "@vladcos/eslint-config"
+    "./src/index.js"
   ],
   "settings": {
     "import/parsers": {
