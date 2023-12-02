@@ -24,9 +24,7 @@ const deps = [
 const project = new (class extends TypeScriptProject {
   override preSynthesize() {
     super.preSynthesize()
-    this.eslint._extends = this.eslint._extends.filter(
-      (item: string) => item !== this.name,
-    )
+    this.eslint._extends?.delete(this.name)
   }
 })({
   defaultReleaseBranch: 'main',
