@@ -75,92 +75,75 @@
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
-      "version": "^6",
       "type": "peer"
     },
     {
       "name": "@typescript-eslint/parser",
-      "version": "^6",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-config-prettier",
-      "version": "^9",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-define-config",
-      "version": "^1",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-import-resolver-alias",
-      "version": "^1",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-import-resolver-typescript",
-      "version": "^3",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-plugin-import",
-      "version": "^2",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-plugin-jest",
-      "version": "^27",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-plugin-json-files",
-      "version": "^3",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-plugin-json-schema-validator",
-      "version": "^4",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-plugin-jsonc",
-      "version": "^2",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-plugin-node",
-      "version": "^11",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-plugin-promise",
-      "version": "^6",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-plugin-sonarjs",
-      "version": "latest",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-plugin-unicorn",
-      "version": "^48",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-plugin-unused-imports",
-      "version": "^3",
-      "type": "peer"
-    },
-    {
-      "name": "eslint-plugin-vue",
-      "version": "^9",
       "type": "peer"
     },
     {
       "name": "eslint",
-      "version": "^8",
+      "type": "peer"
+    },
+    {
+      "name": "eslint-config-prettier",
+      "type": "peer"
+    },
+    {
+      "name": "eslint-define-config",
+      "type": "peer"
+    },
+    {
+      "name": "eslint-import-resolver-alias",
+      "type": "peer"
+    },
+    {
+      "name": "eslint-import-resolver-typescript",
+      "type": "peer"
+    },
+    {
+      "name": "eslint-plugin-import",
+      "type": "peer"
+    },
+    {
+      "name": "eslint-plugin-jest",
+      "type": "peer"
+    },
+    {
+      "name": "eslint-plugin-json-files",
+      "type": "peer"
+    },
+    {
+      "name": "eslint-plugin-json-schema-validator",
+      "type": "peer"
+    },
+    {
+      "name": "eslint-plugin-jsonc",
+      "type": "peer"
+    },
+    {
+      "name": "eslint-plugin-node",
+      "type": "peer"
+    },
+    {
+      "name": "eslint-plugin-promise",
+      "type": "peer"
+    },
+    {
+      "name": "eslint-plugin-sonarjs",
+      "version": "^0",
+      "type": "peer"
+    },
+    {
+      "name": "eslint-plugin-unicorn",
+      "type": "peer"
+    },
+    {
+      "name": "eslint-plugin-unused-imports",
+      "type": "peer"
+    },
+    {
+      "name": "eslint-plugin-vue",
       "type": "peer"
     }
   ],

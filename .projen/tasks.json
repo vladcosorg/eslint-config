@@ -217,13 +217,13 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,@vladcos/prettier-config,@vladcos/projen-base,@vladcos/tsconfig,constructs,eslint-import-resolver-typescript,eslint,prettier,projen,standard-version,ts-node,tsconfig-paths,tsx,typescript,eslint-config-prettier,eslint-define-config,eslint-import-resolver-alias,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-json-files,eslint-plugin-json-schema-validator,eslint-plugin-jsonc,eslint-plugin-node,eslint-plugin-promise,eslint-plugin-unicorn,eslint-plugin-unused-imports,eslint-plugin-vue"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,@vladcos/prettier-config,@vladcos/projen-base,@vladcos/tsconfig,constructs,eslint-import-resolver-typescript,eslint,prettier,projen,standard-version,ts-node,tsconfig-paths,tsx,typescript,eslint-config-prettier,eslint-define-config,eslint-import-resolver-alias,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-json-files,eslint-plugin-json-schema-validator,eslint-plugin-jsonc,eslint-plugin-node,eslint-plugin-promise,eslint-plugin-sonarjs,eslint-plugin-unicorn,eslint-plugin-unused-imports,eslint-plugin-vue"
         },
         {
           "exec": "npm install"
         },
         {
-          "exec": "npm update @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser @vladcos/prettier-config @vladcos/projen-base @vladcos/tsconfig constructs eslint-import-resolver-typescript eslint prettier projen standard-version ts-node tsconfig-paths tsx typescript eslint-config-prettier eslint-define-config eslint-import-resolver-alias eslint-plugin-import eslint-plugin-jest eslint-plugin-json-files eslint-plugin-json-schema-validator eslint-plugin-jsonc eslint-plugin-node eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-unused-imports eslint-plugin-vue"
+          "exec": "npm update @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser @vladcos/prettier-config @vladcos/projen-base @vladcos/tsconfig constructs eslint-import-resolver-typescript eslint prettier projen standard-version ts-node tsconfig-paths tsx typescript eslint-config-prettier eslint-define-config eslint-import-resolver-alias eslint-plugin-import eslint-plugin-jest eslint-plugin-json-files eslint-plugin-json-schema-validator eslint-plugin-jsonc eslint-plugin-node eslint-plugin-promise eslint-plugin-sonarjs eslint-plugin-unicorn eslint-plugin-unused-imports eslint-plugin-vue"
         },
         {
           "exec": "npx projen"
