@@ -1,7 +1,9 @@
 // @ts-check
 const { defineConfig } = require('eslint-define-config')
-
+// Fix eslint shareable config (https://github.com/eslint/eslint/issues/3458)
+require('@rushstack/eslint-patch/modern-module-resolution')
 module.exports = defineConfig({
+  parser: '@typescript-eslint/parser',
   ignorePatterns: ['.eslintrc.js'],
   env: {
     browser: true,
@@ -12,6 +14,8 @@ module.exports = defineConfig({
     './includes/eslint.js',
     './includes/typescript-eslint.js',
     './includes/vue.js',
+    './includes/react.js',
+    './includes/tailwind.js',
     './includes/sonar.js',
     './includes/import.js',
     './includes/unused-imports.js',

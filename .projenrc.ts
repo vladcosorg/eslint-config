@@ -1,10 +1,8 @@
 import { TypeScriptProject } from '@vladcos/projen-base'
 
 const deps = [
-  'eslint',
   '@typescript-eslint/eslint-plugin',
   '@typescript-eslint/parser',
-  // 'eslint-config-canonical',
   'eslint-config-prettier',
   'eslint-define-config',
   'eslint-import-resolver-alias',
@@ -20,6 +18,13 @@ const deps = [
   'eslint-plugin-unicorn',
   'eslint-plugin-unused-imports',
   'eslint-plugin-vue',
+  'eslint-plugin-react',
+  'eslint-plugin-react-hooks',
+  'eslint-plugin-tailwindcss',
+  'eslint-define-config',
+  'eslint-plugin-tailwindcss',
+  '@rushstack/eslint-patch',
+  'eslint-config-canonical',
 ]
 const project = new (class extends TypeScriptProject {
   override preSynthesize() {
@@ -35,7 +40,8 @@ const project = new (class extends TypeScriptProject {
   peerDependencyOptions: {
     pinnedDevDependency: false,
   },
-  peerDeps: deps,
+  deps,
+  peerDeps: ['eslint'],
 })
 // @ts-expect-error We have to edit the private var
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-member-access

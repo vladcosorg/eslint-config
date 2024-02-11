@@ -27,5 +27,32 @@ module.exports = defineConfig({
         ],
       },
     },
+
+    {
+      files: '*.tsx',
+      rules: {
+        'unicorn/prevent-abbreviations': [
+          'error',
+          {
+            replacements: {
+              prop: false,
+              props: false,
+              ref: false,
+              refs: false,
+            },
+            ignore: [/Ref$/],
+          },
+        ],
+        'unicorn/filename-case': [
+          'error',
+          {
+            cases: {
+              kebabCase: true,
+              pascalCase: true,
+            },
+          },
+        ],
+      },
+    },
   ],
 })

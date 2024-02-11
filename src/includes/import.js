@@ -1,9 +1,8 @@
 module.exports = {
   overrides: [
     {
-      files: ['*.vue', '*.js', '*.ts'],
+      files: ['*.vue', '*.js', '*.ts', '*.mts', '*.mjs', '*.mtx'],
       extends: ['plugin:import/recommended', 'plugin:import/typescript'],
-      plugins: ['import'],
       rules: {
         'import/no-unresolved': 'error',
         'import/no-unused-modules': [
@@ -81,11 +80,14 @@ module.exports = {
     },
   ],
   settings: {
-    'import/extensions': ['.js', '.ts', '.vue'],
+    'import/extensions': ['*.vue', '*.js', '*.ts', '*.mts', '*.mjs', '*.mtx'],
     'import/internal-regex': '^@/',
     'import/resolver': {
       typescript: true,
       node: true,
+    },
+    'import/parsers': {
+      '@typescript-eslint/parser': ['*.ts', '*.mts', '*.mtx'],
     },
   },
 }

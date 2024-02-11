@@ -2,19 +2,15 @@
 const { defineConfig } = require('eslint-define-config')
 
 module.exports = defineConfig({
+  parserOptions: { project: 'tsconfig.json' },
   overrides: [
     {
-      files: ['*.ts', '*.js'],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        project: './tsconfig.json',
-      },
+      files: ['*.ts?', '*.js?'],
       extends: [
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:@typescript-eslint/strict',
       ],
-      plugins: ['@typescript-eslint'],
       rules: {
         'node/no-missing-import': 'off',
         camelcase: 'off',
