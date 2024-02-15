@@ -25,6 +25,7 @@ const deps = [
   'eslint-plugin-tailwindcss',
   '@rushstack/eslint-patch',
   'eslint-config-canonical',
+  'eslint-plugin-readable-tailwind',
 ]
 const project = new (class extends TypeScriptProject {
   override preSynthesize() {

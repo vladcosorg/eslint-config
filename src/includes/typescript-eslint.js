@@ -5,13 +5,14 @@ module.exports = defineConfig({
   parserOptions: { project: 'tsconfig.json' },
   overrides: [
     {
-      files: ['*.ts?', '*.js?'],
+      files: ['*.ts', '*.js', '*.tsx'],
       extends: [
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:@typescript-eslint/strict',
       ],
       rules: {
+        'no-undef': 0,
         'node/no-missing-import': 'off',
         camelcase: 'off',
         '@typescript-eslint/member-ordering': 'warn',

@@ -1,7 +1,7 @@
 module.exports = {
   overrides: [
     {
-      files: ['*.vue', '*.js', '*.ts', '*.mts', '*.mjs', '*.mtx'],
+      files: ['*.vue', '*.js', '*.ts', '*.mts', '*.mjs', '*.mtx', '*.tsx'],
       extends: ['plugin:import/recommended', 'plugin:import/typescript'],
       rules: {
         'import/no-unresolved': 'error',
@@ -44,6 +44,10 @@ module.exports = {
               {
                 group: 'internal',
                 pattern: '@/**',
+              },
+              {
+                group: 'internal',
+                pattern: '@*/**',
               },
             ],
           },

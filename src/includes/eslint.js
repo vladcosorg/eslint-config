@@ -22,7 +22,7 @@ module.exports = defineConfig({
     eqeqeq: 'warn',
     'grouped-accessor-pairs': 'warn',
     'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
-    'consistent-return': 'warn',
+    'consistent-return': ['warn', { treatUndefinedAsUnspecified: true }],
     'default-case': 'warn',
     'default-case-last': 'warn',
     'default-param-last': 'warn',

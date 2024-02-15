@@ -146,6 +146,10 @@
       "type": "runtime"
     },
     {
+      "name": "eslint-plugin-readable-tailwind",
+      "type": "runtime"
+    },
+    {
       "name": "eslint-plugin-sonarjs",
       "version": "^0",
       "type": "runtime"

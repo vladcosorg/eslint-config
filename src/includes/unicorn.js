@@ -29,7 +29,7 @@ module.exports = defineConfig({
     },
 
     {
-      files: '*.tsx',
+      files: ['*.tsx', '*.ts'],
       rules: {
         'unicorn/prevent-abbreviations': [
           'error',
