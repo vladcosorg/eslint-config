@@ -1,5 +1,9 @@
 {
   "name": "@vladcos/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vladcosorg/eslint-config"
+  },
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",

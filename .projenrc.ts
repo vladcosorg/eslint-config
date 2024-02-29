@@ -45,6 +45,7 @@ const project = new (class extends TypeScriptProject {
   },
   deps,
   peerDeps: ['eslint'],
+  repository: 'https://github.com/vladcosorg/eslint-config',
 })
 // @ts-expect-error We have to edit the private var
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-member-access
