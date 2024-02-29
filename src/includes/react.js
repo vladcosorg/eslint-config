@@ -11,6 +11,7 @@ module.exports = defineConfig({
         'plugin:react-hooks/recommended',
         'canonical/react',
       ],
+      plugins: ['react-refresh'],
       rules: {
         //   'boolean-prop-naming': 'warning',
         //   'button-has-type': 'warning',
@@ -23,6 +24,10 @@ module.exports = defineConfig({
         //   'react/jsx-curly-brace-presence': 'warning',
         'react/prop-types': 0,
         'react/forbid-component-props': 0,
+        'react-refresh/only-export-components': [
+          'warn',
+          { allowConstantExport: true },
+        ],
         'react/function-component-definition': [
           'warn',
           {

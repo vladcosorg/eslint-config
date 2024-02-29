@@ -146,7 +146,15 @@
       "type": "runtime"
     },
     {
+      "name": "eslint-plugin-react-refresh",
+      "type": "runtime"
+    },
+    {
       "name": "eslint-plugin-readable-tailwind",
+      "type": "runtime"
+    },
+    {
+      "name": "eslint-plugin-simple-import-sort",
       "type": "runtime"
     },
     {

@@ -16,6 +16,13 @@ module.exports = defineConfig({
         },
         ecmaVersion: 'latest',
       },
+      settings: {
+        tailwindcss: {
+          // These are the default values but feel free to customize
+          callees: ['classnames', 'clsx', 'ctl', 'tw', 'tv', 'twMerge'],
+          cssFiles: [],
+        },
+      },
     },
   ],
 })

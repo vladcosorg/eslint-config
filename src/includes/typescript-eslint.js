@@ -23,6 +23,7 @@ module.exports = defineConfig({
         '@typescript-eslint/no-require-imports': 'warn',
         '@typescript-eslint/prefer-enum-initializers': 'warn',
         'no-return-await': 'off',
+        '@typescript-eslint/indent': 'off',
         '@typescript-eslint/return-await': 'warn',
         '@typescript-eslint/switch-exhaustiveness-check': 'warn',
         '@typescript-eslint/sort-type-constituents': 'warn',

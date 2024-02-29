@@ -3,8 +3,17 @@ module.exports = {
     {
       files: ['*.vue', '*.js', '*.ts', '*.mts', '*.mjs', '*.mtx', '*.tsx'],
       extends: ['plugin:import/recommended', 'plugin:import/typescript'],
+      plugins: ['import', 'simple-import-sort'],
       rules: {
-        'import/no-unresolved': 'error',
+        // 'simple-import-sort/imports': 'error',
+        // 'simple-import-sort/exports': 'error',
+        // disable for performance reasosn
+        'import/named': 'off',
+        'import/namespace': 'off',
+        'import/default': 'off',
+        'import/no-named-as-default-member': 'off',
+        'import/no-unresolved': 'off',
+        'import/extensions': 'off',
         'import/no-unused-modules': [
           'warn',
           {

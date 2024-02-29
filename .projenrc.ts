@@ -20,12 +20,14 @@ const deps = [
   'eslint-plugin-vue',
   'eslint-plugin-react',
   'eslint-plugin-react-hooks',
+  'eslint-plugin-react-refresh',
   'eslint-plugin-tailwindcss',
   'eslint-define-config',
   'eslint-plugin-tailwindcss',
   '@rushstack/eslint-patch',
   'eslint-config-canonical',
   'eslint-plugin-readable-tailwind',
+  'eslint-plugin-simple-import-sort',
 ]
 const project = new (class extends TypeScriptProject {
   override preSynthesize() {
