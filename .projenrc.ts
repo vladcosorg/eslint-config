@@ -1,6 +1,7 @@
 import { TypeScriptProject } from '@vladcos/projen-base'
 
 const deps = [
+  'eslint',
   '@typescript-eslint/eslint-plugin',
   '@typescript-eslint/parser',
   'eslint-config-prettier',
@@ -40,11 +41,11 @@ const project = new (class extends TypeScriptProject {
   name: '@vladcos/eslint-config',
   projenrcTs: true,
   packemon: false,
+  projenDevDependency: false,
   peerDependencyOptions: {
     pinnedDevDependency: false,
   },
   deps,
-  peerDeps: ['eslint'],
   repository: 'https://github.com/vladcosorg/eslint-config',
 })
 // @ts-expect-error We have to edit the private var

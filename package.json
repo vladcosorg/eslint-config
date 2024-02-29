@@ -31,24 +31,20 @@
     "@vladcos/prettier-config": "^0.0.28",
     "@vladcos/projen-base": "^0.0.182",
     "@vladcos/tsconfig": "^0.0.25",
-    "constructs": "^10.0.0",
     "eslint": "^8",
     "eslint-import-resolver-typescript": "3.6.1",
     "prettier": "^3",
-    "projen": "0.79.27",
     "standard-version": "^9",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4",
     "tsx": "^4",
     "typescript": "^5.3.3"
   },
-  "peerDependencies": {
-    "eslint": "^8.55.0"
-  },
   "dependencies": {
     "@rushstack/eslint-patch": "^1.7.2",
-    "@typescript-eslint/eslint-plugin": "^7.1.0",
-    "@typescript-eslint/parser": "^7.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
     "eslint-config-canonical": "^42.8.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-define-config": "^2.1.0",
