@@ -42,6 +42,9 @@ const project = new (class extends TypeScriptProject {
   projenrcTs: true,
   packemon: false,
   projenDevDependency: false,
+  disableTsconfig: false,
+  disableTsconfigDev: false,
+  tsconfigDevFile: 'tsconfig.dev.json',
   peerDependencyOptions: {
     pinnedDevDependency: false,
   },
@@ -50,7 +53,6 @@ const project = new (class extends TypeScriptProject {
 })
 // @ts-expect-error We have to edit the private var
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-member-access
-
-project.eslint.addExtends('./src/index.js')
-project.compileTask.reset(`cp -R src  ${project.libdir}`)
+project.eslint.addExtends('./lib/index.js')
+// project.compileTask.reset(`cp -R src  ${project.libdir}`)
 project.synth()
