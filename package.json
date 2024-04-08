@@ -28,8 +28,8 @@
     "@types/node": "^18",
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
-    "@vladcos/prettier-config": "^0.0.38",
-    "@vladcos/projen-base": "^0.0.217",
+    "@vladcos/prettier-config": "^0.0.39",
+    "@vladcos/projen-base": "^0.0.222",
     "@vladcos/tsconfig": "^0.0.25",
     "eslint": "^8",
     "eslint-import-resolver-typescript": "3.6.1",
@@ -38,7 +38,7 @@
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4",
     "tsx": "^4",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.4"
   },
   "dependencies": {
     "@rushstack/eslint-patch": "^1.10.1",
@@ -54,7 +54,7 @@
     "eslint-plugin-jest": "^27.9.0",
     "eslint-plugin-json-files": "^4.1.0",
     "eslint-plugin-json-schema-validator": "^4.9.0",
-    "eslint-plugin-jsonc": "^2.14.1",
+    "eslint-plugin-jsonc": "^2.15.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.34.1",
