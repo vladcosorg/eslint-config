@@ -14,13 +14,13 @@ module.exports = {
         'import/no-named-as-default-member': 'off',
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
-        'import/no-unused-modules': [
-          'warn',
-          {
-            missingExports: true,
-            unusedExports: true,
-          },
-        ],
+        // 'import/no-unused-modules': [
+        //   'warn',
+        //   {
+        //     missingExports: true,
+        //     unusedExports: true,
+        //   },
+        // ],
         'import/no-default-export': 'error',
         'import/dynamic-import-chunkname': [
           'warn',
@@ -67,13 +67,13 @@ module.exports = {
       files: ['*.vue', '*.test.ts'],
       rules: {
         'import/no-default-export': 'off',
-        'import/no-unused-modules': [
-          'error',
-          {
-            missingExports: false,
-            unusedExports: true,
-          },
-        ],
+        // 'import/no-unused-modules': [
+        //   'error',
+        //   {
+        //     missingExports: false,
+        //     unusedExports: true,
+        //   },
+        // ],
       },
     },
     {
