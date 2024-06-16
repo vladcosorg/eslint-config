@@ -16,6 +16,9 @@ module.exports = defineConfig({
         },
         ecmaVersion: 'latest',
       },
+      rules: {
+        'tailwindcss/no-custom-classname': 'off',
+      },
       settings: {
         tailwindcss: {
           // These are the default values but feel free to customize

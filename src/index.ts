@@ -22,7 +22,7 @@ module.exports = defineConfig({
     './includes/unused-imports.js',
     './includes/unicorn.js',
     './includes/promise.js',
-    // './includes/canonical.js',
+    './includes/canonical.js',
     './includes/json.js',
     // './includes/node.js',
     'prettier',

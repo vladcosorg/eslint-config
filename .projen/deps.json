@@ -82,6 +82,7 @@
     },
     {
       "name": "eslint-config-canonical",
+      "version": "42",
       "type": "runtime"
     },
     {
@@ -98,6 +99,10 @@
     },
     {
       "name": "eslint-import-resolver-typescript",
+      "type": "runtime"
+    },
+    {
+      "name": "eslint-plugin-deprecation",
       "type": "runtime"
     },
     {
@@ -118,10 +123,6 @@
     },
     {
       "name": "eslint-plugin-jsonc",
-      "type": "runtime"
-    },
-    {
-      "name": "eslint-plugin-node",
       "type": "runtime"
     },
     {

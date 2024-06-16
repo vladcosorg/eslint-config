@@ -13,7 +13,7 @@ const deps = [
   'eslint-plugin-json-schema-validator',
   'eslint-plugin-jsonc',
   'eslint-plugin-json-files',
-  'eslint-plugin-node',
+  // 'eslint-plugin-node',
   'eslint-plugin-promise',
   'eslint-plugin-sonarjs@^0',
   'eslint-plugin-unicorn',
@@ -26,9 +26,10 @@ const deps = [
   'eslint-define-config',
   'eslint-plugin-tailwindcss',
   '@rushstack/eslint-patch',
-  'eslint-config-canonical',
+  'eslint-config-canonical@42',
   'eslint-plugin-readable-tailwind',
   'eslint-plugin-simple-import-sort',
+  'eslint-plugin-deprecation',
 ]
 const project = new (class extends TypeScriptProject {
   override preSynthesize() {
