@@ -28,8 +28,8 @@
     "@types/node": "^18",
     "@typescript-eslint/eslint-plugin": "^7",
     "@typescript-eslint/parser": "^7",
-    "@vladcos/prettier-config": "^0.0.51",
-    "@vladcos/projen-base": "^0.0.287",
+    "@vladcos/prettier-config": "^0.0.52",
+    "@vladcos/projen-base": "^0.0.293",
     "@vladcos/tsconfig": "^0.0.25",
     "eslint": "^8",
     "eslint-import-resolver-typescript": "3.6.1",
@@ -38,7 +38,7 @@
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4",
     "tsx": "^4",
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.3"
   },
   "dependencies": {
     "@rushstack/eslint-patch": "^1.10.3",
@@ -56,17 +56,17 @@
     "eslint-plugin-json-files": "^4.2.0",
     "eslint-plugin-json-schema-validator": "^5.1.2",
     "eslint-plugin-jsonc": "^2.16.0",
-    "eslint-plugin-promise": "^6.2.0",
+    "eslint-plugin-promise": "^6.4.0",
     "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "eslint-plugin-readable-tailwind": "^1.5.2",
-    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-sonarjs": "^0",
     "eslint-plugin-tailwindcss": "^3.17.4",
     "eslint-plugin-unicorn": "^54.0.0",
     "eslint-plugin-unused-imports": "^3.2.0",
-    "eslint-plugin-vue": "^9.26.0"
+    "eslint-plugin-vue": "^9.27.0"
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",
