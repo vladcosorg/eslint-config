@@ -32,7 +32,8 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": ""
+        "RELEASE_TAG_PREFIX": "",
+        "BUMP_PACKAGE": "commit-and-tag-version@^12"
       },
       "steps": [
         {
@@ -202,7 +203,8 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": ""
+        "RELEASE_TAG_PREFIX": "",
+        "BUMP_PACKAGE": "commit-and-tag-version@^12"
       },
       "steps": [
         {
@@ -224,7 +226,7 @@
           "exec": "npm install"
         },
         {
-          "exec": "npm update @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser @vladcos/prettier-config @vladcos/projen-base @vladcos/tsconfig eslint-import-resolver-typescript eslint prettier standard-version ts-node tsconfig-paths tsx typescript @rushstack/eslint-patch eslint-config-canonical eslint-config-prettier eslint-define-config eslint-import-resolver-alias eslint-plugin-deprecation eslint-plugin-import eslint-plugin-jest eslint-plugin-json-files eslint-plugin-json-schema-validator eslint-plugin-jsonc eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-readable-tailwind eslint-plugin-simple-import-sort eslint-plugin-sonarjs eslint-plugin-tailwindcss eslint-plugin-unicorn eslint-plugin-unused-imports eslint-plugin-vue"
+          "exec": "npm update @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser @vladcos/prettier-config @vladcos/projen-base @vladcos/tsconfig commit-and-tag-version eslint-import-resolver-typescript eslint prettier ts-node tsconfig-paths tsx typescript @rushstack/eslint-patch eslint-config-canonical eslint-config-prettier eslint-define-config eslint-import-resolver-alias eslint-plugin-deprecation eslint-plugin-import eslint-plugin-jest eslint-plugin-json-files eslint-plugin-json-schema-validator eslint-plugin-jsonc eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-readable-tailwind eslint-plugin-simple-import-sort eslint-plugin-sonarjs eslint-plugin-tailwindcss eslint-plugin-unicorn eslint-plugin-unused-imports eslint-plugin-vue"
         },
         {
           "exec": "npx projen"
