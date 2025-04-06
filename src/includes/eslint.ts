@@ -2,7 +2,7 @@
 import { defineConfig } from 'eslint-define-config'
 
 module.exports = defineConfig({
-  extends: ['eslint:recommended', 'plugin:deprecation/recommended'],
+  extends: ['eslint:recommended'],
   rules: {
     'no-await-in-loop': 'error',
     'no-self-compare': 'error',
