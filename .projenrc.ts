@@ -1,9 +1,9 @@
 import { TypeScriptProject } from '@vladcos/projen-base'
 
 const deps = [
-  'eslint',
-  '@typescript-eslint/eslint-plugin',
-  '@typescript-eslint/parser',
+  'eslint@^9',
+  '@typescript-eslint/eslint-plugin@^8',
+  '@typescript-eslint/parser@^8',
   'eslint-config-prettier',
   'eslint-define-config',
   'eslint-import-resolver-alias',
@@ -15,7 +15,7 @@ const deps = [
   'eslint-plugin-json-files',
   // 'eslint-plugin-node',
   'eslint-plugin-promise',
-  'eslint-plugin-sonarjs@^0',
+  'eslint-plugin-sonarjs@3',
   'eslint-plugin-unicorn',
   'eslint-plugin-unused-imports',
   'eslint-plugin-vue',
@@ -26,10 +26,9 @@ const deps = [
   'eslint-define-config',
   'eslint-plugin-tailwindcss',
   '@rushstack/eslint-patch',
-  'eslint-config-canonical@42',
+  'eslint-config-canonical',
   'eslint-plugin-readable-tailwind',
   'eslint-plugin-simple-import-sort',
-  'eslint-plugin-deprecation',
 ]
 const project = new (class extends TypeScriptProject {
   override preSynthesize() {

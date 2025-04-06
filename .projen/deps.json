@@ -2,17 +2,16 @@
   "dependencies": [
     {
       "name": "@types/node",
-      "version": "^18",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
-      "version": "^7",
+      "version": "^8",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/parser",
-      "version": "^7",
+      "version": "^8",
       "type": "build"
     },
     {
@@ -28,22 +27,26 @@
       "type": "build"
     },
     {
+      "name": "commit-and-tag-version",
+      "version": "^12",
+      "type": "build"
+    },
+    {
       "name": "eslint-import-resolver-typescript",
       "type": "build"
     },
     {
+      "name": "eslint-plugin-import",
+      "type": "build"
+    },
+    {
       "name": "eslint",
-      "version": "^8",
+      "version": "^9",
       "type": "build"
     },
     {
       "name": "prettier",
       "version": "^3",
-      "type": "build"
-    },
-    {
-      "name": "standard-version",
-      "version": "^9",
       "type": "build"
     },
     {
@@ -70,19 +73,16 @@
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
+      "version": "^8",
       "type": "runtime"
     },
     {
       "name": "@typescript-eslint/parser",
-      "type": "runtime"
-    },
-    {
-      "name": "eslint",
+      "version": "^8",
       "type": "runtime"
     },
     {
       "name": "eslint-config-canonical",
-      "version": "42",
       "type": "runtime"
     },
     {
@@ -99,10 +99,6 @@
     },
     {
       "name": "eslint-import-resolver-typescript",
-      "type": "runtime"
-    },
-    {
-      "name": "eslint-plugin-deprecation",
       "type": "runtime"
     },
     {
@@ -151,7 +147,7 @@
     },
     {
       "name": "eslint-plugin-sonarjs",
-      "version": "^0",
+      "version": "3",
       "type": "runtime"
     },
     {
@@ -168,6 +164,11 @@
     },
     {
       "name": "eslint-plugin-vue",
+      "type": "runtime"
+    },
+    {
+      "name": "eslint",
+      "version": "^9",
       "type": "runtime"
     }
   ],
