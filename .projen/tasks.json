@@ -112,8 +112,13 @@
       },
       "steps": [
         {
-          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern $@ src tests build-tools projenrc .projenrc.ts",
-          "receiveArgs": true
+          "exec": "eslint --fix --no-error-on-unmatched-pattern $@ src tests build-tools * projenrc .projenrc.ts",
+          "args": [
+            "--no-warn-ignored"
+          ],
+          "env": {
+            "ESLINT_USE_FLAT_CONFIG": "true"
+          }
         }
       ]
     },
@@ -223,13 +228,13 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@types/node,@vladcos/prettier-config,@vladcos/projen-base,@vladcos/tsconfig,eslint-import-resolver-typescript,eslint-plugin-import,ts-node,typescript,@rushstack/eslint-patch,eslint-config-canonical,eslint-config-prettier,eslint-define-config,eslint-import-resolver-alias,eslint-plugin-jest,eslint-plugin-json-files,eslint-plugin-json-schema-validator,eslint-plugin-jsonc,eslint-plugin-promise,eslint-plugin-react,eslint-plugin-react-hooks,eslint-plugin-react-refresh,eslint-plugin-readable-tailwind,eslint-plugin-simple-import-sort,eslint-plugin-tailwindcss,eslint-plugin-unicorn,eslint-plugin-unused-imports,eslint-plugin-vue"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@types/node,@vladcos/prettier-config,@vladcos/projen-base,@vladcos/tsconfig,eslint-import-resolver-typescript,eslint-plugin-import,jiti,ts-node,typescript,@antfu/eslint-config,@eslint/compat,@eslint/eslintrc,@eslint/js,@eslint/json,@types/eslint-plugin-tailwindcss,eslint-config-canonical,eslint-config-prettier,eslint-define-config,eslint-import-resolver-alias,eslint-plugin-de-morgan,eslint-plugin-jest,eslint-plugin-json-files,eslint-plugin-json-schema-validator,eslint-plugin-jsonc,eslint-plugin-perfectionist,eslint-plugin-promise,eslint-plugin-react,eslint-plugin-react-hooks,eslint-plugin-react-refresh,eslint-plugin-readable-tailwind,eslint-plugin-simple-import-sort,eslint-plugin-tailwindcss,eslint-plugin-unused-imports,eslint-plugin-vue,globals"
         },
         {
           "exec": "npm install"
         },
         {
-          "exec": "npm update @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser @vladcos/prettier-config @vladcos/projen-base @vladcos/tsconfig commit-and-tag-version eslint-import-resolver-typescript eslint-plugin-import eslint prettier ts-node tsconfig-paths tsx typescript @rushstack/eslint-patch eslint-config-canonical eslint-config-prettier eslint-define-config eslint-import-resolver-alias eslint-plugin-jest eslint-plugin-json-files eslint-plugin-json-schema-validator eslint-plugin-jsonc eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-readable-tailwind eslint-plugin-simple-import-sort eslint-plugin-sonarjs eslint-plugin-tailwindcss eslint-plugin-unicorn eslint-plugin-unused-imports eslint-plugin-vue"
+          "exec": "npm update @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser @vladcos/prettier-config @vladcos/projen-base @vladcos/tsconfig commit-and-tag-version eslint-import-resolver-typescript eslint-plugin-import eslint jiti prettier ts-node tsconfig-paths tsx typescript @antfu/eslint-config @eslint/compat @eslint/eslintrc @eslint/js @eslint/json @types/eslint-plugin-tailwindcss eslint-config-canonical eslint-config-prettier eslint-define-config eslint-import-resolver-alias eslint-plugin-de-morgan eslint-plugin-jest eslint-plugin-json-files eslint-plugin-json-schema-validator eslint-plugin-jsonc eslint-plugin-perfectionist eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-readable-tailwind eslint-plugin-simple-import-sort eslint-plugin-sonarjs eslint-plugin-tailwindcss eslint-plugin-unicorn eslint-plugin-unused-imports eslint-plugin-vue globals"
         },
         {
           "exec": "npx projen"

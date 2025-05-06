@@ -1,33 +1,34 @@
-import '@rushstack/eslint-patch/modern-module-resolution'
-import { defineConfig } from 'eslint-define-config'
+import { defineConfig } from 'eslint/config'
 
-// Fix eslint shareable config (https://github.com/eslint/eslint/issues/3458)
+import { eslintConfig } from './includes/eslint'
+import { importConfig } from './includes/import'
+import { jsonConfig } from './includes/json'
+import { perfectionistConfig } from './includes/perfectionist'
+import { promiseConfig } from './includes/promise'
+import { reactConfig } from './includes/react'
+import { sonarConfig } from './includes/sonar'
+import { tailwindConfig } from './includes/tailwind'
+import { typescriptConfig } from './includes/typescript'
+import { unicornConfig } from './includes/unicorn'
+import { unusedImportsConfig } from './includes/unused-imports'
 
-module.exports = defineConfig({
-  parser: '@typescript-eslint/parser',
-  ignorePatterns: ['.eslintrc.js'],
-  env: {
-    browser: true,
-    es2022: true,
-    node: true,
+export const vladcosEslintConfig = defineConfig(
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+      },
+    },
   },
-  extends: [
-    './includes/eslint.js',
-    './includes/typescript-eslint.js',
-    './includes/vue.js',
-    './includes/react.js',
-    './includes/tailwind.js',
-    './includes/sonar.js',
-    './includes/import.js',
-    './includes/unused-imports.js',
-    './includes/unicorn.js',
-    './includes/promise.js',
-    './includes/canonical.js',
-    './includes/json.js',
-    // './includes/node.js',
-    'prettier',
-  ],
-  globals: {},
-  rules: {},
-  plugins: [],
-})
+  unicornConfig,
+  eslintConfig,
+  promiseConfig,
+  jsonConfig,
+  typescriptConfig,
+  importConfig,
+  sonarConfig,
+  reactConfig,
+  tailwindConfig,
+  unusedImportsConfig,
+  perfectionistConfig,
+)

@@ -1,58 +1,64 @@
-// @ts-check
-import { defineConfig } from 'eslint-define-config'
+import unicorn from 'eslint-plugin-unicorn'
+import { defineConfig } from 'eslint/config'
 
-module.exports = defineConfig({
-  extends: 'plugin:unicorn/recommended',
-  plugins: ['unicorn'],
-  rules: {
-    'unicorn/prefer-at': 'warn',
+export const unicornConfig = defineConfig(
+  {
+    extends: [unicorn.configs.recommended],
+    files: [
+      '**/*.js',
+      '**/*.ts',
+      '**/*.mts',
+      '**/*.mjs',
+      '**/*.mtx',
+      '**/*.tsx',
+    ],
+    rules: {
+      'unicorn/prefer-at': 'warn',
+    },
   },
-  overrides: [
-    {
-      files: '.eslintrc.js',
-      rules: {
-        'unicorn/prefer-module': 'off',
-      },
+  {
+    files: ['.eslintrc.js'],
+    rules: {
+      'unicorn/prefer-module': 'off',
     },
-    {
-      files: '*.vue',
-      rules: {
-        'unicorn/prevent-abbreviations': [
-          'error',
-          {
-            allowList: {
-              props: true,
-            },
+  },
+  {
+    files: ['*.vue'],
+    rules: {
+      'unicorn/prevent-abbreviations': [
+        'error',
+        {
+          allowList: {
+            props: true,
           },
-        ],
-      },
+        },
+      ],
     },
-
-    {
-      files: ['*.tsx', '*.ts'],
-      rules: {
-        'unicorn/prevent-abbreviations': [
-          'error',
-          {
-            replacements: {
-              prop: false,
-              props: false,
-              ref: false,
-              refs: false,
-            },
-            ignore: [/Ref$/],
+  },
+  {
+    files: ['*.tsx', '*.ts'],
+    rules: {
+      'unicorn/filename-case': [
+        'error',
+        {
+          cases: {
+            kebabCase: true,
+            pascalCase: true,
           },
-        ],
-        'unicorn/filename-case': [
-          'error',
-          {
-            cases: {
-              kebabCase: true,
-              pascalCase: true,
-            },
+        },
+      ],
+      'unicorn/prevent-abbreviations': [
+        'error',
+        {
+          ignore: [/Ref$/],
+          replacements: {
+            prop: false,
+            props: false,
+            ref: false,
+            refs: false,
           },
-        ],
-      },
+        },
+      ],
     },
-  ],
-})
+  },
+)

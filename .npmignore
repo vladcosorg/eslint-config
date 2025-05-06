@@ -7,7 +7,6 @@ permissions-backup.acl
 /.prettierignore
 /.prettierrc.json
 /tests/
-/tsconfig.dev.json
 /src/
 !/lib/
 !/lib/**/*.js

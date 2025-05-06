@@ -1,21 +1,23 @@
-// @ts-check
-import { defineConfig } from 'eslint-define-config'
+import { type Linter } from 'eslint'
+import eslintPluginJsonc from 'eslint-plugin-jsonc'
+import { defineConfig } from 'eslint/config'
 
-module.exports = defineConfig({
-  overrides: [
-    {
-      files: ['*.json', '*.json5', '*.jsonc'],
-      extends: [
-        'plugin:jsonc/recommended-with-json',
-        'plugin:json-schema-validator/recommended',
-        'plugin:jsonc/prettier',
-      ],
-      rules: {
-        'json-files/sort-package-json': 'warn',
-        'json-files/require-unique-dependency-names': 'warn',
-      },
-      parser: 'jsonc-eslint-parser',
-      plugins: ['json-files'],
-    },
+const jsonPlugin = eslintPluginJsonc.configs[
+  'flat/recommended-with-json'
+] as Linter.Config
+import json from '@eslint/json'
+
+export const jsonConfig = defineConfig({
+  extends: [
+    jsonPlugin,
+    // eslintPluginJsonSchemaValidator.configs['flat/recommended'],
   ],
+  files: ['*.json'],
+  language: 'json/json',
+  plugins: {
+    json,
+  },
+  rules: {
+    'json/no-duplicate-keys': 'error',
+  },
 })

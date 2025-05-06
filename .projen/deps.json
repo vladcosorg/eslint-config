@@ -45,6 +45,10 @@
       "type": "build"
     },
     {
+      "name": "jiti",
+      "type": "build"
+    },
+    {
       "name": "prettier",
       "version": "^3",
       "type": "build"
@@ -68,7 +72,27 @@
       "type": "build"
     },
     {
-      "name": "@rushstack/eslint-patch",
+      "name": "@antfu/eslint-config",
+      "type": "runtime"
+    },
+    {
+      "name": "@eslint/compat",
+      "type": "runtime"
+    },
+    {
+      "name": "@eslint/eslintrc",
+      "type": "runtime"
+    },
+    {
+      "name": "@eslint/js",
+      "type": "runtime"
+    },
+    {
+      "name": "@eslint/json",
+      "type": "runtime"
+    },
+    {
+      "name": "@types/eslint-plugin-tailwindcss",
       "type": "runtime"
     },
     {
@@ -102,6 +126,10 @@
       "type": "runtime"
     },
     {
+      "name": "eslint-plugin-de-morgan",
+      "type": "runtime"
+    },
+    {
       "name": "eslint-plugin-import",
       "type": "runtime"
     },
@@ -119,6 +147,10 @@
     },
     {
       "name": "eslint-plugin-jsonc",
+      "type": "runtime"
+    },
+    {
+      "name": "eslint-plugin-perfectionist",
       "type": "runtime"
     },
     {
@@ -156,6 +188,7 @@
     },
     {
       "name": "eslint-plugin-unicorn",
+      "version": "59",
       "type": "runtime"
     },
     {
@@ -169,6 +202,10 @@
     {
       "name": "eslint",
       "version": "^9",
+      "type": "runtime"
+    },
+    {
+      "name": "globals",
       "type": "runtime"
     }
   ],

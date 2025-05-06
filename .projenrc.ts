@@ -1,22 +1,29 @@
+import { TypeScriptModuleResolution } from 'projen/lib/javascript/typescript-config'
+
 import { TypeScriptProject } from '@vladcos/projen-base'
 
 const deps = [
   'eslint@^9',
   '@typescript-eslint/eslint-plugin@^8',
   '@typescript-eslint/parser@^8',
+  '@eslint/js',
+  'globals',
+  '@eslint/compat',
+  '@eslint/eslintrc',
+  '@eslint/json',
   'eslint-config-prettier',
   'eslint-define-config',
   'eslint-import-resolver-alias',
+  'eslint-plugin-perfectionist',
   'eslint-import-resolver-typescript',
   'eslint-plugin-import',
   'eslint-plugin-jest',
   'eslint-plugin-json-schema-validator',
   'eslint-plugin-jsonc',
   'eslint-plugin-json-files',
-  // 'eslint-plugin-node',
   'eslint-plugin-promise',
   'eslint-plugin-sonarjs@3',
-  'eslint-plugin-unicorn',
+  'eslint-plugin-unicorn@59',
   'eslint-plugin-unused-imports',
   'eslint-plugin-vue',
   'eslint-plugin-react',
@@ -25,34 +32,59 @@ const deps = [
   'eslint-plugin-tailwindcss',
   'eslint-define-config',
   'eslint-plugin-tailwindcss',
-  '@rushstack/eslint-patch',
   'eslint-config-canonical',
   'eslint-plugin-readable-tailwind',
   'eslint-plugin-simple-import-sort',
+  '@types/eslint-plugin-tailwindcss',
+  'eslint-plugin-de-morgan',
+  '@antfu/eslint-config',
 ]
 const project = new (class extends TypeScriptProject {
   override preSynthesize() {
     super.preSynthesize()
+    // new javascript.TypescriptConfig(project, {
+    //   extends: TypescriptConfigExtends.fromTypescriptConfigs([
+    //     project.tsconfigDev,
+    //   ]),
+    //   fileName: 'tsconfig.eslintd.json',
+    //   include: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.json', '**/*.js'],
+    // })
     this.eslint._extends?.delete(this.name)
   }
 })({
   defaultReleaseBranch: 'main',
-  devDeps: ['@vladcos/projen-base'],
-  name: '@vladcos/eslint-config',
-  projenrcTs: true,
-  packemon: false,
-  projenDevDependency: false,
-  disableTsconfig: false,
+  deps,
+  devDeps: ['@vladcos/projen-base', 'jiti'],
+  disableTsconfig: true,
   disableTsconfigDev: false,
-  tsconfigDevFile: 'tsconfig.dev.json',
+  eslintOptions: { fileExtensions: [] },
+  name: '@vladcos/eslint-config',
+  packemon: false,
   peerDependencyOptions: {
     pinnedDevDependency: false,
   },
-  deps,
+  projenDevDependency: false,
+  projenrcTs: true,
+
   repository: 'https://github.com/vladcosorg/eslint-config',
+  tsconfigDev: {
+    compilerOptions: { moduleResolution: TypeScriptModuleResolution.BUNDLER },
+    include: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.json', '**/*.js'],
+  },
+  tsconfigDevFile: 'tsconfig.json',
 })
 // @ts-expect-error We have to edit the private var
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-member-access
+
 project.eslint.addExtends('./lib/index.js')
+// project.eslint._lintPatterns = new Set()
+
+project.eslint?.addLintPattern('*')
+// project.eslint.updateTask()
 // project.compileTask.reset(`cp -R src  ${project.libdir}`)
+project.eslint?.eslintTask.reset('eslint', {
+  args: ['--no-warn-ignored'],
+  env: {
+    ESLINT_USE_FLAT_CONFIG: 'true',
+  },
+})
 project.synth()

@@ -1,0 +1,53 @@
+import { typescript } from 'eslint-config-canonical'
+import { recommended as typeChecked } from 'eslint-config-canonical/typescript-type-checking'
+import deMorgan from 'eslint-plugin-de-morgan'
+import tseslint from 'typescript-eslint'
+
+import { type ConfigWithExtendsArray } from '@eslint/config-helpers'
+
+export const typescriptConfig = tseslint.config(
+  {
+    extends: [
+      tseslint.configs.recommendedTypeChecked,
+      deMorgan.configs.recommended,
+      typescript.recommended,
+      typeChecked,
+    ],
+    files: ['**/*.{jsx,tsx,mtx,ts,mts}'],
+    rules: {
+      '@typescript-eslint/array-type': ['warn', { default: 'array-simple' }],
+      '@typescript-eslint/consistent-type-imports': 'warn',
+      '@typescript-eslint/indent': 'off',
+      '@typescript-eslint/member-ordering': 'warn',
+      '@typescript-eslint/method-signature-style': 'warn',
+      '@typescript-eslint/no-confusing-void-expression': 'warn',
+      '@typescript-eslint/no-redundant-type-constituents': 'warn',
+      '@typescript-eslint/no-require-imports': 'warn',
+      '@typescript-eslint/prefer-enum-initializers': 'warn',
+      '@typescript-eslint/promise-function-async': 'warn',
+      '@typescript-eslint/return-await': 'warn',
+      '@typescript-eslint/sort-type-constituents': 'warn',
+      '@typescript-eslint/switch-exhaustiveness-check': 'warn',
+      camelcase: 'off',
+      'no-return-await': 'off',
+      'no-undef': 0,
+      'node/no-missing-import': 'off',
+    },
+  },
+
+  {
+    files: ['*.test.ts'],
+    rules: {
+      '@typescript-eslint/require-await': 'off',
+    },
+  },
+  {
+    files: ['*.tsx'],
+    rules: {
+      '@typescript-eslint/no-misused-promises': [
+        'error',
+        { checksVoidReturn: { attributes: false } },
+      ],
+    },
+  },
+) as ConfigWithExtendsArray
