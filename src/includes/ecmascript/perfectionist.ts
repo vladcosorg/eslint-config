@@ -9,6 +9,7 @@ export const perfectionist = defineConfig({
   extends: [config],
   files: [GLOB_SRC],
   rules: {
+    '@typescript-eslint/sort-type-constituent': 'off',
     'perfectionist/sort-imports': [
       'error',
       {

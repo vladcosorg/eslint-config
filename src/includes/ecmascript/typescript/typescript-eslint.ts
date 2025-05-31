@@ -29,7 +29,6 @@ export const typescriptEslint = config(
       '@typescript-eslint/prefer-enum-initializers': 'warn',
       '@typescript-eslint/promise-function-async': 'warn',
       '@typescript-eslint/return-await': 'warn',
-      '@typescript-eslint/sort-type-constituents': 'warn',
       '@typescript-eslint/switch-exhaustiveness-check': 'warn',
       camelcase: 'off',
       'no-return-await': 'off',

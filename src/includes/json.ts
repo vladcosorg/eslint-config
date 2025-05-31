@@ -17,11 +17,7 @@ const jsonPlugin = eslintPluginJsonc.configs[
 export const json = async function () {
   return defineConfig(
     {
-      extends: [
-        jsonPlugin,
-        eslintJson.configs.recommended,
-        // eslintPluginJsonSchemaValidator.configs['flat/recommended'],
-      ],
+      extends: [jsonPlugin, eslintJson.configs.recommended],
       files: [GLOB_JSON],
       language: 'json/json',
       rules: {

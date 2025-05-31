@@ -5,6 +5,7 @@ import { javascript } from './javascript'
 import { perfectionist } from './perfectionist'
 import { react } from './react'
 import { regexp } from './regexp'
+import { sonar } from './sonar'
 import { typescript } from './typescript'
 
 export const ecmaScript = defineConfig(
@@ -14,4 +15,5 @@ export const ecmaScript = defineConfig(
   react,
   perfectionist,
   regexp,
+  sonar,
 )

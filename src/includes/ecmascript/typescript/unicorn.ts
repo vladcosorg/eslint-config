@@ -1,7 +1,7 @@
 import unicornPlugin from 'eslint-plugin-unicorn'
 import { defineConfig } from 'eslint/config'
 
-import { GLOB_SRC, GLOB_TSX } from '@antfu/eslint-config'
+import { GLOB_SRC, GLOB_SRC_EXT, GLOB_TSX } from '@antfu/eslint-config'
 
 export const unicorn = defineConfig(
   {
@@ -13,7 +13,7 @@ export const unicorn = defineConfig(
     },
   },
   {
-    files: [GLOB_TSX],
+    files: [GLOB_TSX, `**/use-*.${GLOB_SRC_EXT}`],
     rules: {
       'unicorn/filename-case': [
         'error',

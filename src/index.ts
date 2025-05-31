@@ -4,7 +4,6 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 import { ecmaScript } from './includes/ecmascript'
 import { json } from './includes/json'
 import { tailwind } from './includes/tailwind'
-import { unusedImportsConfig } from './includes/unused-imports'
 
 export async function config() {
   return defineConfig(
@@ -32,10 +31,8 @@ export async function config() {
         sourceType: 'module',
       },
     },
-    // sonar,
     ecmaScript,
     tailwind,
-    unusedImportsConfig,
     await json(),
   )
 }

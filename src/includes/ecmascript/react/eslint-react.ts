@@ -18,4 +18,9 @@ export const eslintReact = defineConfig({
     '@eslint-react/prefer-shorthand-boolean': 2,
     '@eslint-react/prefer-shorthand-fragment': 2,
   },
+  settings: {
+    'react-x': {
+      version: '18.3.1',
+    },
+  },
 })
