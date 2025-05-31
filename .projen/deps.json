@@ -76,6 +76,10 @@
       "type": "runtime"
     },
     {
+      "name": "@eslint-react/eslint-plugin",
+      "type": "runtime"
+    },
+    {
       "name": "@eslint/compat",
       "type": "runtime"
     },
@@ -134,6 +138,10 @@
       "type": "runtime"
     },
     {
+      "name": "eslint-plugin-import-x",
+      "type": "runtime"
+    },
+    {
       "name": "eslint-plugin-jest",
       "type": "runtime"
     },
@@ -150,6 +158,10 @@
       "type": "runtime"
     },
     {
+      "name": "eslint-plugin-no-relative-import-paths",
+      "type": "runtime"
+    },
+    {
       "name": "eslint-plugin-perfectionist",
       "type": "runtime"
     },
@@ -162,6 +174,10 @@
       "type": "runtime"
     },
     {
+      "name": "eslint-plugin-react-compiler",
+      "type": "runtime"
+    },
+    {
       "name": "eslint-plugin-react-hooks",
       "type": "runtime"
     },
@@ -171,6 +187,10 @@
     },
     {
       "name": "eslint-plugin-readable-tailwind",
+      "type": "runtime"
+    },
+    {
+      "name": "eslint-plugin-relative-imports-when-same-folder",
       "type": "runtime"
     },
     {

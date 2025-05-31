@@ -1,7 +1,14 @@
-import sonarjs from 'eslint-plugin-sonarjs'
+import sonarPlugin from 'eslint-plugin-sonarjs'
 import { defineConfig } from 'eslint/config'
 
-export const sonarConfig = defineConfig({
-  extends: [sonarjs.configs.recommended],
-  files: ['**/*.js', '**/*.ts', '**/*.mts', '**/*.mjs', '**/*.mtx', '**/*.tsx'],
+import { GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX } from '../const'
+
+export const sonar = defineConfig({
+  extends: [sonarPlugin.configs.recommended],
+  files: [GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX],
+  rules: {
+    // Perfrormance problems
+    'sonarjs/deprecation': 'off',
+    'sonarjs/no-commented-code': 'off',
+  },
 })

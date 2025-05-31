@@ -1,12 +1,7 @@
 module.exports = {
-  // extends: ['plugin:canonical/recommended', 'canonical/prettier'],
-  // extends: ['canonical', 'canonical/prettier'],
-  // rules: {/**/
-  //   'canonical/filename-match-exported': 'off',
-  // },
-  plugins: ['canonical'],
   overrides: [
     {
+      files: '*.ts',
       rules: {
         // 'virtual-module': 'warn',
         'canonical/prefer-import-alias': [
@@ -22,7 +17,12 @@ module.exports = {
           },
         ],
       },
-      files: '*.ts',
     },
   ],
+  // extends: ['plugin:canonical/recommended', 'canonical/prettier'],
+  // extends: ['canonical', 'canonical/prettier'],
+  // rules: {/**/
+  //   'canonical/filename-match-exported': 'off',
+  // },
+  plugins: ['canonical'],
 }

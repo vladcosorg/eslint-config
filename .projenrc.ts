@@ -1,3 +1,4 @@
+/* eslint-disable relative-imports-when-same-folder/no-relative-imports-when-same-folder */
 import { TypeScriptModuleResolution } from 'projen/lib/javascript/typescript-config'
 
 import { TypeScriptProject } from '@vladcos/projen-base'
@@ -38,6 +39,11 @@ const deps = [
   '@types/eslint-plugin-tailwindcss',
   'eslint-plugin-de-morgan',
   '@antfu/eslint-config',
+  'eslint-plugin-react-compiler',
+  '@eslint-react/eslint-plugin',
+  'eslint-plugin-import-x',
+  'eslint-plugin-relative-imports-when-same-folder',
+  'eslint-plugin-no-relative-import-paths',
 ]
 const project = new (class extends TypeScriptProject {
   override preSynthesize() {
@@ -82,7 +88,10 @@ project.eslint?.addLintPattern('*')
 // project.eslint.updateTask()
 // project.compileTask.reset(`cp -R src  ${project.libdir}`)
 project.eslint?.eslintTask.reset('eslint', {
-  args: ['--no-warn-ignored'],
+  args: [
+    '--no-warn-ignored',
+    ...project.files.map((file) => `--ignore-pattern ${file.path}`),
+  ],
   env: {
     ESLINT_USE_FLAT_CONFIG: 'true',
   },

@@ -1,16 +1,16 @@
-import antfu from '@antfu/eslint-config'
+import { defineConfig, globalIgnores } from 'eslint/config'
 
-export default antfu()
+import { config } from './src'
 
-// export default defineConfig([
-//   globalIgnores([
-//     '**/*.js',
-//     '**/*.d.ts',
-//     '**/node_modules/',
-//     '**/*.generated.ts',
-//     '**/coverage',
-//     '!**/.projenrc.ts',
-//     '!projenrc/**/*.ts',
-//   ]),
-//   vladcosEslintConfig,
-// ])
+export default defineConfig([
+  globalIgnores([
+    '**/*.js',
+    '**/*.d.ts',
+    '**/node_modules/',
+    '**/*.generated.ts',
+    '**/coverage',
+    '!**/.projenrc.ts',
+    '!projenrc/**/*.ts',
+  ]),
+  await config(),
+])

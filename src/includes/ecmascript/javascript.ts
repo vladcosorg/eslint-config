@@ -1,11 +1,39 @@
 import { defineConfig } from 'eslint/config'
+import globals from 'globals'
 
 import js from '@eslint/js'
 
-export const eslintConfig = defineConfig(
+import { GLOB_JS } from '../../const'
+
+export const javascript = defineConfig(
+  {
+    languageOptions: {
+      ecmaVersion: 2022,
+      globals: {
+        ...globals.browser,
+        ...globals.es2021,
+        ...globals.node,
+        document: 'readonly',
+        navigator: 'readonly',
+        window: 'readonly',
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+        ecmaVersion: 2022,
+        sourceType: 'module',
+      },
+      sourceType: 'module',
+    },
+    linterOptions: {
+      reportUnusedDisableDirectives: true,
+    },
+    name: 'antfu/javascript/setup',
+  },
   {
     extends: ['js/recommended'],
-    files: ['**/*.js', '**/*.cjs', '**.*.mjs'],
+    files: [GLOB_JS],
     plugins: { js },
     rules: {
       'arrow-body-style': ['warn', 'as-needed'],

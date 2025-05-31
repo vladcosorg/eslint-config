@@ -1,19 +1,18 @@
 import { typescript } from 'eslint-config-canonical'
 import { recommended as typeChecked } from 'eslint-config-canonical/typescript-type-checking'
-import deMorgan from 'eslint-plugin-de-morgan'
 import tseslint from 'typescript-eslint'
 
+import { GLOB_TS, GLOB_TSX } from '@antfu/eslint-config'
 import { type ConfigWithExtendsArray } from '@eslint/config-helpers'
 
-export const typescriptConfig = tseslint.config(
+export const typescriptEslint = tseslint.config(
   {
     extends: [
       tseslint.configs.recommendedTypeChecked,
-      deMorgan.configs.recommended,
       typescript.recommended,
       typeChecked,
     ],
-    files: ['**/*.{jsx,tsx,mtx,ts,mts}'],
+    files: [GLOB_TS, GLOB_TSX],
     rules: {
       '@typescript-eslint/array-type': ['warn', { default: 'array-simple' }],
       '@typescript-eslint/consistent-type-imports': 'warn',
@@ -21,6 +20,10 @@ export const typescriptConfig = tseslint.config(
       '@typescript-eslint/member-ordering': 'warn',
       '@typescript-eslint/method-signature-style': 'warn',
       '@typescript-eslint/no-confusing-void-expression': 'warn',
+      '@typescript-eslint/no-misused-promises': [
+        'error',
+        { checksVoidReturn: { attributes: false } },
+      ],
       '@typescript-eslint/no-redundant-type-constituents': 'warn',
       '@typescript-eslint/no-require-imports': 'warn',
       '@typescript-eslint/prefer-enum-initializers': 'warn',
@@ -39,15 +42,6 @@ export const typescriptConfig = tseslint.config(
     files: ['*.test.ts'],
     rules: {
       '@typescript-eslint/require-await': 'off',
-    },
-  },
-  {
-    files: ['*.tsx'],
-    rules: {
-      '@typescript-eslint/no-misused-promises': [
-        'error',
-        { checksVoidReturn: { attributes: false } },
-      ],
     },
   },
 ) as ConfigWithExtendsArray

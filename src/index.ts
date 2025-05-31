@@ -1,34 +1,28 @@
 import { defineConfig } from 'eslint/config'
 
-import { eslintConfig } from './includes/eslint'
-import { importConfig } from './includes/import'
-import { jsonConfig } from './includes/json'
-import { perfectionistConfig } from './includes/perfectionist'
-import { promiseConfig } from './includes/promise'
-import { reactConfig } from './includes/react'
-import { sonarConfig } from './includes/sonar'
-import { tailwindConfig } from './includes/tailwind'
-import { typescriptConfig } from './includes/typescript'
-import { unicornConfig } from './includes/unicorn'
+import { ecmaScript } from './includes/ecmascript'
+import { json } from './includes/json'
+import { tailwind } from './includes/tailwind'
 import { unusedImportsConfig } from './includes/unused-imports'
 
-export const vladcosEslintConfig = defineConfig(
-  {
-    languageOptions: {
-      parserOptions: {
-        projectService: true,
+export async function config() {
+  return defineConfig(
+    {
+      languageOptions: {
+        ecmaVersion: 'latest',
+        parserOptions: {
+          ecmaFeatures: {
+            jsx: true,
+          },
+          projectService: true,
+        },
+        sourceType: 'module',
       },
     },
-  },
-  unicornConfig,
-  eslintConfig,
-  promiseConfig,
-  jsonConfig,
-  typescriptConfig,
-  importConfig,
-  sonarConfig,
-  reactConfig,
-  tailwindConfig,
-  unusedImportsConfig,
-  perfectionistConfig,
-)
+    // sonar,
+    ecmaScript,
+    tailwind,
+    unusedImportsConfig,
+    await json(),
+  )
+}

@@ -114,7 +114,24 @@
         {
           "exec": "eslint --fix --no-error-on-unmatched-pattern $@ src tests build-tools * projenrc .projenrc.ts",
           "args": [
-            "--no-warn-ignored"
+            "--no-warn-ignored",
+            "--ignore-pattern .eslintrc.json",
+            "--ignore-pattern .gitattributes",
+            "--ignore-pattern .github/workflows/auto-approve.yml",
+            "--ignore-pattern .github/workflows/build.yml",
+            "--ignore-pattern .github/workflows/release.yml",
+            "--ignore-pattern .github/workflows/upgrade-main.yml",
+            "--ignore-pattern .gitignore",
+            "--ignore-pattern .mergify.yml",
+            "--ignore-pattern .npmignore",
+            "--ignore-pattern .prettierignore",
+            "--ignore-pattern .prettierrc.json",
+            "--ignore-pattern .projen/deps.json",
+            "--ignore-pattern .projen/files.json",
+            "--ignore-pattern .projen/tasks.json",
+            "--ignore-pattern LICENSE",
+            "--ignore-pattern package.json",
+            "--ignore-pattern tsconfig.json"
           ],
           "env": {
             "ESLINT_USE_FLAT_CONFIG": "true"
@@ -228,13 +245,13 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@types/node,@vladcos/prettier-config,@vladcos/projen-base,@vladcos/tsconfig,eslint-import-resolver-typescript,eslint-plugin-import,jiti,ts-node,typescript,@antfu/eslint-config,@eslint/compat,@eslint/eslintrc,@eslint/js,@eslint/json,@types/eslint-plugin-tailwindcss,eslint-config-canonical,eslint-config-prettier,eslint-define-config,eslint-import-resolver-alias,eslint-plugin-de-morgan,eslint-plugin-jest,eslint-plugin-json-files,eslint-plugin-json-schema-validator,eslint-plugin-jsonc,eslint-plugin-perfectionist,eslint-plugin-promise,eslint-plugin-react,eslint-plugin-react-hooks,eslint-plugin-react-refresh,eslint-plugin-readable-tailwind,eslint-plugin-simple-import-sort,eslint-plugin-tailwindcss,eslint-plugin-unused-imports,eslint-plugin-vue,globals"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@types/node,@vladcos/prettier-config,@vladcos/projen-base,@vladcos/tsconfig,eslint-import-resolver-typescript,eslint-plugin-import,jiti,ts-node,typescript,@antfu/eslint-config,@eslint-react/eslint-plugin,@eslint/compat,@eslint/eslintrc,@eslint/js,@eslint/json,@types/eslint-plugin-tailwindcss,eslint-config-canonical,eslint-config-prettier,eslint-define-config,eslint-import-resolver-alias,eslint-plugin-de-morgan,eslint-plugin-import-x,eslint-plugin-jest,eslint-plugin-json-files,eslint-plugin-json-schema-validator,eslint-plugin-jsonc,eslint-plugin-no-relative-import-paths,eslint-plugin-perfectionist,eslint-plugin-promise,eslint-plugin-react,eslint-plugin-react-compiler,eslint-plugin-react-hooks,eslint-plugin-react-refresh,eslint-plugin-readable-tailwind,eslint-plugin-relative-imports-when-same-folder,eslint-plugin-simple-import-sort,eslint-plugin-tailwindcss,eslint-plugin-unused-imports,eslint-plugin-vue,globals"
         },
         {
           "exec": "npm install"
         },
         {
-          "exec": "npm update @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser @vladcos/prettier-config @vladcos/projen-base @vladcos/tsconfig commit-and-tag-version eslint-import-resolver-typescript eslint-plugin-import eslint jiti prettier ts-node tsconfig-paths tsx typescript @antfu/eslint-config @eslint/compat @eslint/eslintrc @eslint/js @eslint/json @types/eslint-plugin-tailwindcss eslint-config-canonical eslint-config-prettier eslint-define-config eslint-import-resolver-alias eslint-plugin-de-morgan eslint-plugin-jest eslint-plugin-json-files eslint-plugin-json-schema-validator eslint-plugin-jsonc eslint-plugin-perfectionist eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-readable-tailwind eslint-plugin-simple-import-sort eslint-plugin-sonarjs eslint-plugin-tailwindcss eslint-plugin-unicorn eslint-plugin-unused-imports eslint-plugin-vue globals"
+          "exec": "npm update @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser @vladcos/prettier-config @vladcos/projen-base @vladcos/tsconfig commit-and-tag-version eslint-import-resolver-typescript eslint-plugin-import eslint jiti prettier ts-node tsconfig-paths tsx typescript @antfu/eslint-config @eslint-react/eslint-plugin @eslint/compat @eslint/eslintrc @eslint/js @eslint/json @types/eslint-plugin-tailwindcss eslint-config-canonical eslint-config-prettier eslint-define-config eslint-import-resolver-alias eslint-plugin-de-morgan eslint-plugin-import-x eslint-plugin-jest eslint-plugin-json-files eslint-plugin-json-schema-validator eslint-plugin-jsonc eslint-plugin-no-relative-import-paths eslint-plugin-perfectionist eslint-plugin-promise eslint-plugin-react eslint-plugin-react-compiler eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-readable-tailwind eslint-plugin-relative-imports-when-same-folder eslint-plugin-simple-import-sort eslint-plugin-sonarjs eslint-plugin-tailwindcss eslint-plugin-unicorn eslint-plugin-unused-imports eslint-plugin-vue globals"
         },
         {
           "exec": "npx projen"
