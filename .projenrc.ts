@@ -1,4 +1,3 @@
-/* eslint-disable relative-imports-when-same-folder/no-relative-imports-when-same-folder */
 import { TypeScriptModuleResolution } from 'projen/lib/javascript/typescript-config'
 
 import { TypeScriptProject } from '@vladcos/projen-base'
@@ -16,15 +15,14 @@ const deps = [
   'eslint-define-config',
   'eslint-import-resolver-alias',
   'eslint-plugin-perfectionist',
-  'eslint-import-resolver-typescript',
-  'eslint-plugin-import',
+  'eslint-import-resolver-typescript@^4',
   'eslint-plugin-jest',
   'eslint-plugin-json-schema-validator',
   'eslint-plugin-jsonc',
   'eslint-plugin-json-files',
   'eslint-plugin-promise',
-  'eslint-plugin-sonarjs@3',
-  'eslint-plugin-unicorn@59',
+  'eslint-plugin-sonarjs@^3',
+  'eslint-plugin-unicorn@^59',
   'eslint-plugin-unused-imports',
   'eslint-plugin-vue',
   'eslint-plugin-react',
@@ -44,6 +42,7 @@ const deps = [
   'eslint-plugin-import-x',
   'eslint-plugin-relative-imports-when-same-folder',
   'eslint-plugin-no-relative-import-paths',
+  'eslint-plugin-regexp',
 ]
 const project = new (class extends TypeScriptProject {
   override preSynthesize() {

@@ -1,14 +1,14 @@
 import { typescript } from 'eslint-config-canonical'
 import { recommended as typeChecked } from 'eslint-config-canonical/typescript-type-checking'
-import tseslint from 'typescript-eslint'
+import { config, configs } from 'typescript-eslint'
 
 import { GLOB_TS, GLOB_TSX } from '@antfu/eslint-config'
 import { type ConfigWithExtendsArray } from '@eslint/config-helpers'
 
-export const typescriptEslint = tseslint.config(
+export const typescriptEslint = config(
   {
     extends: [
-      tseslint.configs.recommendedTypeChecked,
+      configs.recommendedTypeChecked,
       typescript.recommended,
       typeChecked,
     ],

@@ -14,16 +14,22 @@ export const importXConfig = defineConfig(
     ],
     files: [GLOB_SRC],
     rules: {
+      'import-x/consistent-type-specifier-style': ['error', 'prefer-inline'],
       'import-x/exports-last': 'warn',
       'import-x/group-exports': 'warn',
+      'import-x/newline-after-import': ['error', { count: 1 }],
       'import-x/no-default-export': 'error',
       'import-x/no-duplicates': ['warn', { 'prefer-inline': true }],
+      'import-x/no-mutable-exports': 'error',
+      'import-x/no-named-default': 'error',
+      'import-x/no-self-import': 'error',
       'import-x/no-useless-path-segments': [
         'error',
         {
           noUselessIndex: true,
         },
       ],
+      'import-x/no-webpack-loader-syntax': 'error',
     },
     settings: {
       'import-x/internal-regex': '^@/',

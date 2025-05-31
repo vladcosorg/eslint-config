@@ -1,9 +1,8 @@
 import { defineConfig } from 'eslint/config'
 import globals from 'globals'
 
+import { GLOB_JS } from '@antfu/eslint-config'
 import js from '@eslint/js'
-
-import { GLOB_JS } from '../../const'
 
 export const javascript = defineConfig(
   {

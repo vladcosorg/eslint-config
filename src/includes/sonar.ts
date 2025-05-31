@@ -1,11 +1,11 @@
 import sonarPlugin from 'eslint-plugin-sonarjs'
 import { defineConfig } from 'eslint/config'
 
-import { GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX } from '../const'
+import { GLOB_SRC } from '@antfu/eslint-config'
 
 export const sonar = defineConfig({
   extends: [sonarPlugin.configs.recommended],
-  files: [GLOB_JS, GLOB_JSX, GLOB_TS, GLOB_TSX],
+  files: [GLOB_SRC],
   rules: {
     // Perfrormance problems
     'sonarjs/deprecation': 'off',
