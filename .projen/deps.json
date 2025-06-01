@@ -54,6 +54,10 @@
       "type": "build"
     },
     {
+      "name": "rolldown",
+      "type": "build"
+    },
+    {
       "name": "ts-node",
       "type": "build"
     },

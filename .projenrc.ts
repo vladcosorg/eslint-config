@@ -1,5 +1,8 @@
-import { TypeScriptModuleResolution } from 'projen/lib/javascript/typescript-config'
-
+import {
+  TypescriptConfigExtends,
+  TypeScriptModuleResolution,
+} from 'projen/lib/javascript/typescript-config'
+import { javascript } from 'projen'
 import { TypeScriptProject } from '@vladcos/projen-base'
 
 const deps = [
@@ -47,20 +50,13 @@ const deps = [
 const project = new (class extends TypeScriptProject {
   override preSynthesize() {
     super.preSynthesize()
-    // new javascript.TypescriptConfig(project, {
-    //   extends: TypescriptConfigExtends.fromTypescriptConfigs([
-    //     project.tsconfigDev,
-    //   ]),
-    //   fileName: 'tsconfig.eslintd.json',
-    //   include: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.json', '**/*.js'],
-    // })
     this.eslint._extends?.delete(this.name)
   }
 })({
   defaultReleaseBranch: 'main',
   deps,
-  devDeps: ['@vladcos/projen-base', 'jiti'],
-  disableTsconfig: true,
+  devDeps: ['@vladcos/projen-base', 'jiti', 'rolldown'],
+  disableTsconfig: false,
   disableTsconfigDev: false,
   eslintOptions: { fileExtensions: [] },
   name: '@vladcos/eslint-config',
@@ -72,11 +68,21 @@ const project = new (class extends TypeScriptProject {
   projenrcTs: true,
 
   repository: 'https://github.com/vladcosorg/eslint-config',
-  tsconfigDev: {
-    compilerOptions: { moduleResolution: TypeScriptModuleResolution.BUNDLER },
-    include: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.json', '**/*.js'],
+  tsconfig: {
+    fileName: 'tsconfig.prod.json',
+    compilerOptions: {
+      module: 'nodenext',
+      moduleResolution: TypeScriptModuleResolution.NODE16,
+    },
   },
-  tsconfigDevFile: 'tsconfig.json',
+  tsconfigDev: {
+    compilerOptions: {
+      moduleResolution: TypeScriptModuleResolution.BUNDLER,
+      module: 'ES6',
+    },
+    include: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.json', '**/*.js'],
+    fileName: 'tsconfig.json',
+  },
 })
 // @ts-expect-error We have to edit the private var
 

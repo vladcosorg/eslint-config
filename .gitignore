@@ -39,6 +39,7 @@ jspm_packages/
 !/.prettierignore
 !/.prettierrc.json
 !/tests/
+!/tsconfig.prod.json
 !/tsconfig.json
 !/src/
 /lib

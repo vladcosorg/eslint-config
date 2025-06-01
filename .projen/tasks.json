@@ -79,7 +79,7 @@
       "description": "Only compile",
       "steps": [
         {
-          "exec": "tsc --build"
+          "exec": "tsc --build tsconfig.prod.json"
         }
       ]
     },
@@ -131,7 +131,8 @@
             "--ignore-pattern .projen/tasks.json",
             "--ignore-pattern LICENSE",
             "--ignore-pattern package.json",
-            "--ignore-pattern tsconfig.json"
+            "--ignore-pattern tsconfig.json",
+            "--ignore-pattern tsconfig.prod.json"
           ],
           "env": {
             "ESLINT_USE_FLAT_CONFIG": "true"
@@ -245,13 +246,13 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@types/node,@vladcos/prettier-config,@vladcos/projen-base,@vladcos/tsconfig,eslint-import-resolver-typescript,eslint-plugin-import,jiti,ts-node,typescript,@antfu/eslint-config,@eslint-react/eslint-plugin,@eslint/compat,@eslint/eslintrc,@eslint/js,@eslint/json,@types/eslint-plugin-tailwindcss,eslint-config-canonical,eslint-config-prettier,eslint-define-config,eslint-import-resolver-alias,eslint-plugin-de-morgan,eslint-plugin-import-x,eslint-plugin-jest,eslint-plugin-json-files,eslint-plugin-json-schema-validator,eslint-plugin-jsonc,eslint-plugin-no-relative-import-paths,eslint-plugin-perfectionist,eslint-plugin-promise,eslint-plugin-react,eslint-plugin-react-compiler,eslint-plugin-react-hooks,eslint-plugin-react-refresh,eslint-plugin-readable-tailwind,eslint-plugin-regexp,eslint-plugin-relative-imports-when-same-folder,eslint-plugin-simple-import-sort,eslint-plugin-tailwindcss,eslint-plugin-unused-imports,eslint-plugin-vue,globals"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@types/node,@vladcos/prettier-config,@vladcos/projen-base,@vladcos/tsconfig,eslint-import-resolver-typescript,eslint-plugin-import,jiti,rolldown,ts-node,typescript,@antfu/eslint-config,@eslint-react/eslint-plugin,@eslint/compat,@eslint/eslintrc,@eslint/js,@eslint/json,@types/eslint-plugin-tailwindcss,eslint-config-canonical,eslint-config-prettier,eslint-define-config,eslint-import-resolver-alias,eslint-plugin-de-morgan,eslint-plugin-import-x,eslint-plugin-jest,eslint-plugin-json-files,eslint-plugin-json-schema-validator,eslint-plugin-jsonc,eslint-plugin-no-relative-import-paths,eslint-plugin-perfectionist,eslint-plugin-promise,eslint-plugin-react,eslint-plugin-react-compiler,eslint-plugin-react-hooks,eslint-plugin-react-refresh,eslint-plugin-readable-tailwind,eslint-plugin-regexp,eslint-plugin-relative-imports-when-same-folder,eslint-plugin-simple-import-sort,eslint-plugin-tailwindcss,eslint-plugin-unused-imports,eslint-plugin-vue,globals"
         },
         {
           "exec": "npm install"
         },
         {
-          "exec": "npm update @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser @vladcos/prettier-config @vladcos/projen-base @vladcos/tsconfig commit-and-tag-version eslint-import-resolver-typescript eslint-plugin-import eslint jiti prettier ts-node tsconfig-paths tsx typescript @antfu/eslint-config @eslint-react/eslint-plugin @eslint/compat @eslint/eslintrc @eslint/js @eslint/json @types/eslint-plugin-tailwindcss eslint-config-canonical eslint-config-prettier eslint-define-config eslint-import-resolver-alias eslint-plugin-de-morgan eslint-plugin-import-x eslint-plugin-jest eslint-plugin-json-files eslint-plugin-json-schema-validator eslint-plugin-jsonc eslint-plugin-no-relative-import-paths eslint-plugin-perfectionist eslint-plugin-promise eslint-plugin-react eslint-plugin-react-compiler eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-readable-tailwind eslint-plugin-regexp eslint-plugin-relative-imports-when-same-folder eslint-plugin-simple-import-sort eslint-plugin-sonarjs eslint-plugin-tailwindcss eslint-plugin-unicorn eslint-plugin-unused-imports eslint-plugin-vue globals"
+          "exec": "npm update @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser @vladcos/prettier-config @vladcos/projen-base @vladcos/tsconfig commit-and-tag-version eslint-import-resolver-typescript eslint-plugin-import eslint jiti prettier rolldown ts-node tsconfig-paths tsx typescript @antfu/eslint-config @eslint-react/eslint-plugin @eslint/compat @eslint/eslintrc @eslint/js @eslint/json @types/eslint-plugin-tailwindcss eslint-config-canonical eslint-config-prettier eslint-define-config eslint-import-resolver-alias eslint-plugin-de-morgan eslint-plugin-import-x eslint-plugin-jest eslint-plugin-json-files eslint-plugin-json-schema-validator eslint-plugin-jsonc eslint-plugin-no-relative-import-paths eslint-plugin-perfectionist eslint-plugin-promise eslint-plugin-react eslint-plugin-react-compiler eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-readable-tailwind eslint-plugin-regexp eslint-plugin-relative-imports-when-same-folder eslint-plugin-simple-import-sort eslint-plugin-sonarjs eslint-plugin-tailwindcss eslint-plugin-unicorn eslint-plugin-unused-imports eslint-plugin-vue globals"
         },
         {
           "exec": "npx projen"
@@ -266,7 +267,7 @@
       "description": "Watch & compile in the background",
       "steps": [
         {
-          "exec": "tsc --build -w"
+          "exec": "tsc --build -w tsconfig.prod.json"
         }
       ]
     }
