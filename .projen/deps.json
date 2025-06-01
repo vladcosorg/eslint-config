@@ -36,10 +36,6 @@
       "type": "build"
     },
     {
-      "name": "eslint-plugin-import",
-      "type": "build"
-    },
-    {
       "name": "eslint",
       "version": "^9",
       "type": "build"
