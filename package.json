@@ -29,7 +29,7 @@
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
     "@vladcos/prettier-config": "^0.0.60",
-    "@vladcos/projen-base": "^0.0.414",
+    "@vladcos/projen-base": "^0.0.417",
     "@vladcos/tsconfig": "^0.0.25",
     "commit-and-tag-version": "^12",
     "eslint": "^9",
