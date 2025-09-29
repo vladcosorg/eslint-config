@@ -58,14 +58,14 @@
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
+    "eslint-plugin-react-refresh": "^0.4.22",
     "eslint-plugin-readable-tailwind": "^2.1.2",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-sonarjs": "3",
     "eslint-plugin-tailwindcss": "^3.18.2",
     "eslint-plugin-unicorn": "^58.0.0",
     "eslint-plugin-unused-imports": "^4.2.0",
-    "eslint-plugin-vue": "^10.4.0"
+    "eslint-plugin-vue": "^10.5.0"
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",
