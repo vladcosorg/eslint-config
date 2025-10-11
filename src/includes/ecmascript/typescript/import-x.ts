@@ -31,9 +31,6 @@ export const importXConfig = defineConfig(
       ],
       'import-x/no-webpack-loader-syntax': 'error',
     },
-    settings: {
-      'import-x/internal-regex': '^@/',
-    },
   },
   {
     files: ['*.vue', '*.test.ts'],
