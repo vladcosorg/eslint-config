@@ -10,6 +10,18 @@ export const unicorn = defineConfig(
     rules: {
       'unicorn/no-null': 'off',
       'unicorn/prefer-at': 'warn',
+      'unicorn/prevent-abbreviations': [
+        'error',
+        {
+          ignore: [/Ref$/],
+          replacements: {
+            prop: false,
+            props: false,
+            ref: false,
+            refs: false,
+          },
+        },
+      ],
     },
   },
   {
@@ -21,18 +33,6 @@ export const unicorn = defineConfig(
           cases: {
             kebabCase: true,
             pascalCase: true,
-          },
-        },
-      ],
-      'unicorn/prevent-abbreviations': [
-        'error',
-        {
-          ignore: [/Ref$/],
-          replacements: {
-            prop: false,
-            props: false,
-            ref: false,
-            refs: false,
           },
         },
       ],
