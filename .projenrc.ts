@@ -1,8 +1,5 @@
-import {
-  TypescriptConfigExtends,
-  TypeScriptModuleResolution,
-} from 'projen/lib/javascript/typescript-config'
-import { javascript } from 'projen'
+import { TypeScriptModuleResolution } from 'projen/lib/javascript/typescript-config'
+
 import { TypeScriptProject } from '@vladcos/projen-base'
 
 const deps = [
@@ -25,7 +22,7 @@ const deps = [
   'eslint-plugin-json-files',
   'eslint-plugin-promise',
   'eslint-plugin-sonarjs@^3',
-  'eslint-plugin-unicorn@^59',
+  'eslint-plugin-unicorn@^61',
   'eslint-plugin-unused-imports',
   'eslint-plugin-vue',
   'eslint-plugin-react',
@@ -69,19 +66,19 @@ const project = new (class extends TypeScriptProject {
 
   repository: 'https://github.com/vladcosorg/eslint-config',
   tsconfig: {
-    fileName: 'tsconfig.prod.json',
     compilerOptions: {
       module: 'nodenext',
       moduleResolution: TypeScriptModuleResolution.NODE16,
     },
+    fileName: 'tsconfig.prod.json',
   },
   tsconfigDev: {
     compilerOptions: {
-      moduleResolution: TypeScriptModuleResolution.BUNDLER,
       module: 'ES6',
+      moduleResolution: TypeScriptModuleResolution.BUNDLER,
     },
-    include: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.json', '**/*.js'],
     fileName: 'tsconfig.json',
+    include: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.json', '**/*.js'],
   },
 })
 // @ts-expect-error We have to edit the private var

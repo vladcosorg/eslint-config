@@ -209,7 +209,7 @@
     },
     {
       "name": "eslint-plugin-unicorn",
-      "version": "^59",
+      "version": "^61",
       "type": "runtime"
     },
     {
