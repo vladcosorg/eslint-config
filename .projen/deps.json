@@ -77,6 +77,7 @@
     },
     {
       "name": "@eslint-react/eslint-plugin",
+      "version": "^2",
       "type": "runtime"
     },
     {
@@ -96,10 +97,6 @@
       "type": "runtime"
     },
     {
-      "name": "@types/eslint-plugin-tailwindcss",
-      "type": "runtime"
-    },
-    {
       "name": "@typescript-eslint/eslint-plugin",
       "version": "^8",
       "type": "runtime"
@@ -111,6 +108,7 @@
     },
     {
       "name": "eslint-config-canonical",
+      "version": "^45",
       "type": "runtime"
     },
     {
@@ -131,6 +129,10 @@
       "type": "runtime"
     },
     {
+      "name": "eslint-plugin-better-tailwindcss",
+      "type": "runtime"
+    },
+    {
       "name": "eslint-plugin-de-morgan",
       "type": "runtime"
     },
@@ -139,11 +141,8 @@
       "type": "runtime"
     },
     {
-      "name": "eslint-plugin-jest",
-      "type": "runtime"
-    },
-    {
       "name": "eslint-plugin-json-files",
+      "version": "^5",
       "type": "runtime"
     },
     {
@@ -180,10 +179,6 @@
     },
     {
       "name": "eslint-plugin-react-refresh",
-      "type": "runtime"
-    },
-    {
-      "name": "eslint-plugin-readable-tailwind",
       "type": "runtime"
     },
     {
