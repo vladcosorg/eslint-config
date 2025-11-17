@@ -61,7 +61,7 @@
     "eslint-plugin-de-morgan": "^2.0.0",
     "eslint-plugin-import-x": "^4.16.1",
     "eslint-plugin-json-files": "^5",
-    "eslint-plugin-json-schema-validator": "^5.4.1",
+    "eslint-plugin-json-schema-validator": "^5.5.0",
     "eslint-plugin-jsonc": "^2.21.0",
     "eslint-plugin-no-relative-import-paths": "^v1.6.1",
     "eslint-plugin-perfectionist": "^4.15.1",
